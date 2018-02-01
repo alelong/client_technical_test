@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<!--css for slick slider-->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script src="js/script.js"></script>
+	<!--js for slick slider-->
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<title>Homepage</title>
+</head>
+
+<body>
+	<div id="left_margin">
+		<div class="column_bis" id="column1_bis">
+			<img class="qa_imageN" src="images/ln_image1.jpg" alt="Analytics">
+			<ul>
+				<li data-color="red" class="red_off" id="globalAnalytics_bis"><div class="inner">Global Analytics<div class="qa_color_red_off" id="globalAnalytics_qa_color_bis"></div></div></li>
+				<li data-color="red" class="red_off" id="localAnalytics_bis"><div class="inner">Local Analytics<div class="qa_color_red_off" id="localAnalytics_qa_color_bis"></div></div></li>
+			</ul>
+			</div>
+			<div class="column_bis" id="column2_bis">
+			<img class="qa_imageN" src="images/ln_image2.jpg" alt="Reporting">
+			<ul>
+				<li data-color="yellow" class="yellow_off" id="MBRDecks_bis"><div class="inner">MBR Decks<div class="qa_color_yellow_off" id="MBRDecks_qa_color_bis"></div></div></li>
+				<li data-color="yellow" class="yellow_off" id="IMRPublications_bis"><div class="inner">IMR Publications<div class="qa_color_yellow_off" id="IMRPublications_qa_color_bis"></div></div></li>
+			</ul>
+			</div>
+			<div class="column_bis" id="column3_bis">
+			<img class="qa_imageN" src="images/ln_image3.jpg" alt="Data Visualization">
+			<ul>
+				<li data-color="orange" class="orange_off" id="tableau_bis"><div class="inner">Tableau<div class="qa_color_orange_off" id="tableau_qa_color_bis"></div></div></li>
+			</ul>
+			</div>
+			<div class="column_bis" id="column4_bis">
+			<img class="qa_imageN" src="images/ln_image4.jpg" alt="Planning">
+			<ul>
+				<li data-color="maroon" class="maroon_off" id="globalTM1_bis"><div class="inner">Global (TM1)<div class="qa_color_maroon_off" id="globalTM1_qa_color_bis"></div></div></li>
+				<li data-color="maroon" class="maroon_off" id="localSAPBPC_bis"><div class="inner">Local (SAP BPC)<div class="qa_color_maroon_off" id="localSAPBPC_qa_color_bis"></div></div></li>
+			</ul>
+			</div>
+	</div>
+	<div id="main_section"><!--left column with main banner, 4 tiles and 2 tiles underneath-->
+		<div id="top_section">
+			<div id="grey_box"><!--grey box replacing main banner when switching to state 2--></div>
+			<div id="main_banner"><!--main banner containing full size carousel-->
+				<img id="banner-1" src="images/banner.jpg" alt="Business Intelligence">
+				<img id="banner-2" src="images/banner-2.jpg" alt="Business Intelligence">
+				<img id="banner-3" src="images/banner-3.jpg" alt="Business Intelligence">
+			</div>
+			<div id="sub_banner"><!--banner containing reduced carousel-->
+				<img id="sub_banner-1" src="images/sub_banner.jpg" alt="Business Intelligence" class="sub_banner_image">
+				<img id="sub_banner-2" src="images/sub_banner-2.jpg" alt="Business Intelligence" class="hide_banner sub_banner_image">
+				<img id="sub_banner-3" src="images/sub_banner-3.jpg" alt="Business Intelligence" class="hide_banner sub_banner_image">
+			</div>
+		</div>
+		<div id="menu_options"><!-- main container, width = 780px = width of the banner -->
+			<div class="column" id="column1">
+			<img class="qa_imageN" src="images/qa_image1.jpg" alt="Analytics">
+			<ul>
+				<li id="globalAnalytics"><div class="inner">Global Analytics<img class="qa_color" src="images/qa_red.png" alt="Global Analytics"></div></li>
+				<li id="localAnalytics"><div class="inner">Local Analytics<img class="qa_color" src="images/qa_red.png" alt="Local Analytics"></div></li>
+			</ul>
+			</div>
+			<div class="column" id="column2">
+			<img class="qa_imageN" src="images/qa_image2.jpg" alt="Reporting">
+			<ul>
+				<li id="MBRDecks"><div class="inner">MBR Decks<img class="qa_color" src="images/qa_yellow.png" alt="MBR Decks"></div></li>
+				<li id="IMRPublications"><div class="inner">IMR Publications<img class="qa_color" src="images/qa_yellow.png" alt="IMR Publications"></div></li>
+			</ul>
+			</div>
+			<div class="column" id="column3">
+			<img class="qa_imageN" src="images/qa_image3.jpg" alt="Data Visualization">
+			<ul>
+				<li id="tableau"><div class="inner">Tableau<img class="qa_color" src="images/qa_orange.png" alt="Tableau"></div></li>
+			</ul>
+			</div>
+			<div class="column" id="column4">
+			<img class="qa_imageN" src="images/qa_image4.jpg" alt="Planning">
+			<ul>
+				<li id="globalTM1"><div class="inner">Global (TM1)<img class="qa_color" src="images/qa_maroon.png" alt="Global (TM1)"></div></li>
+				<li id="localSAPBPC"><div class="inner">Local (SAP BPC)<img class="qa_color" src="images/qa_maroon.png" alt="Local (SAP BPC)"></div></li>
+			</ul>
+			</div>
+		</div>
+		<div id="menu_options_bis"><!-- main container, width = 780px = width of the banner -->
+			<div id="globalAnalytics_bis_section" class="inactive">
+				<div class="detailed_menu_options analytics_menu_options" id="globalAnalytics_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+					<ul>
+						<li id="SalesAnalysis"><div class="inner">Sales Analysis</div></li>
+						<li id="BrandAnalysis"><div class="inner">Brand Analysis</div></li>
+						<li id="IncomeStatementAnalysis"><div class="inner">Income Statement Analysis</div></li>
+						<li id="FTEs/PersonalCosts"><div class="inner">FTEs/Personal Costs</div></li>
+						<li id="ManagementCashFlow"><div class="inner">Management Cash Flow</div></li>
+						<li id="LOHistory"><div class="inner">LO History</div></li>
+						<li id="S&OPAnalysis"><div class="inner">S&amp;OPAnalysis</div></li>
+						<li id="GenMedMBRTools"><div class="inner">GenMed MBR Tools</div></li>
+						<li id="OncoMBRTools"><div class="inner">OncoMBRTools</div></li>
+						<li id="Ad-hocAnalysis"><div class="inner">Ad-hoc Analysis</div></li>
+					</ul>
+				</div>
+				<div class="detailed_docs analytics_docs" id="SalesAnalysis_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="localAnalytics_bis_section" class="inactive">
+				<div class="detailed_menu_options analytics_menu_options" id="localAnalytics_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+					<ul>
+						<li id="Lorem ipsum"><div class="inner">Lorem ipsum</div></li>
+						<li id="Dolor sit amet"><div class="inner">Dolor sit amet</div></li>
+						<li id="Consectetur"><div class="inner">Consectetur</div></li>
+						<li id="Adipiscing elit"><div class="inner">Adipiscing elit</div></li>
+						<li id="Aenean eget"><div class="inner">Aenean eget</div></li>
+						<li id="Erat tortor"><div class="inner">Erat tortor</div></li>
+						<li id="Vestibulum"><div class="inner">Vestibulum</div></li>
+						<li id="Ullamcorper"><div class="inner">Ullamcorper</div></li>
+						<li id="Purus tincidunt"><div class="inner">Purus tincidunt</div></li>
+						<li id="Lectus egestas"><div class="inner">Lectus egestas ante imperdiet</div></li>
+					</ul>
+				</div>
+				<div class="detailed_docs analytics_docs" id="SalesAnalysis_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="MBRDecks_bis_section" class="inactive">
+				<div class="detailed_menu_options reporting_menu_options" id="MBRDecks_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+					<ul>
+						<li id="Lorem ipsum"><div class="inner">Lorem ipsum</div></li>
+						<li id="Dolor sit amet"><div class="inner">Dolor sit amet</div></li>
+						<li id="Consectetur"><div class="inner">Consectetur</div></li>
+						<li id="Adipiscing elit"><div class="inner">Adipiscing elit</div></li>
+						<li id="Aenean eget"><div class="inner">Aenean eget</div></li>
+						<li id="Erat tortor"><div class="inner">Erat tortor</div></li>
+						<li id="Vestibulum"><div class="inner">Vestibulum</div></li>
+						<li id="Ullamcorper"><div class="inner">Ullamcorper</div></li>
+						<li id="Purus tincidunt"><div class="inner">Purus tincidunt</div></li>
+						<li id="Lectus egestas"><div class="inner">Lectus egestas ante imperdiet </div></li>
+					</ul>
+				</div>
+				<div class="detailed_docs reporting_docs" id="LoremIpsum_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div id="IMRPublications_bis_section" class="inactive">
+				<div class="detailed_menu_options reporting_menu_options" id="IMRPublications_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+				<ul>
+					<li id="Lorem ipsum"><div class="inner">Lorem ipsum #2</div></li>
+					<li id="Dolor sit amet"><div class="inner">Dolor sit amet</div></li>
+					<li id="Consectetur"><div class="inner">Consectetur</div></li>
+					<li id="Adipiscing elit"><div class="inner">Adipiscing elit</div></li>
+					<li id="Aenean eget"><div class="inner">Aenean eget</div></li>
+					<li id="Erat tortor"><div class="inner">Erat tortor</div></li>
+					<li id="Vestibulum"><div class="inner">Vestibulum</div></li>
+					<li id="Ullamcorper"><div class="inner">Ullamcorper</div></li>
+					<li id="Purus tincidunt"><div class="inner">Purus tincidunt</div></li>
+					<li id="Lectus egestas"><div class="inner">Lectus egestas ante imperdiet </div></li>
+				</ul>
+				</div>
+				<div class="detailed_docs reporting_docs" id="DolorSit_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tableau_bis_section" class="inactive">
+				<div class="detailed_menu_options dataVisualization_menu_options" id="tableau_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+					<ul>
+						<li id="Lorem ipsum"><div class="inner">Lorem ipsum</div></li>
+						<li id="Dolor sit amet"><div class="inner">Dolor sit amet</div></li>
+						<li id="Consectetur"><div class="inner">Consectetur</div></li>
+						<li id="Adipiscing elit"><div class="inner">Adipiscing elit</div></li>
+						<li id="Aenean eget"><div class="inner">Aenean eget</div></li>
+						<li id="Erat tortor"><div class="inner">Erat tortor</div></li>
+						<li id="Vestibulum"><div class="inner">Vestibulum</div></li>
+						<li id="Ullamcorper"><div class="inner">Ullamcorper</div></li>
+						<li id="Purus tincidunt"><div class="inner">Purus tincidunt</div></li>
+						<li id="Lectus egestas"><div class="inner">Lectus egestas ante imperdiet </div></li>
+					</ul>
+				</div>
+				<div class="detailed_docs dataVisualization_docs" id="Consectetur_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="globalTM1_bis_section" class="inactive">
+				<div class="detailed_menu_options planning_menu_options" id="globalTM1_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+					<ul>
+						<li id="Lorem ipsum"><div class="inner">Lorem ipsum</div></li>
+						<li id="Dolor sit amet"><div class="inner">Dolor sit amet</div></li>
+						<li id="Consectetur"><div class="inner">Consectetur</div></li>
+						<li id="Adipiscing elit"><div class="inner">Adipiscing elit</div></li>
+						<li id="Aenean eget"><div class="inner">Aenean eget</div></li>
+						<li id="Erat tortor"><div class="inner">Erat tortor</div></li>
+						<li id="Vestibulum"><div class="inner">Vestibulum</div></li>
+						<li id="Ullamcorper"><div class="inner">Ullamcorper</div></li>
+						<li id="Purus tincidunt"><div class="inner">Purus tincidunt</div></li>
+						<li id="Lectus egestas"><div class="inner">Lectus egestas ante imperdiet </div></li>
+					</ul>
+				</div>
+				<div class="detailed_docs planning_docs" id="Adipiscing_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="localSAPBPC_bis_section" class="inactive">
+				<div class="detailed_menu_options planning_menu_options" id="localSAPBPC_bis_menu_options"><!-- main container, width = 780px = width of the banner -->
+					<ul>
+						<li id="Lorem ipsum"><div class="inner">Lorem ipsum #2</div></li>
+						<li id="Dolor sit amet"><div class="inner">Dolor sit amet</div></li>
+						<li id="Consectetur"><div class="inner">Consectetur</div></li>
+						<li id="Adipiscing elit"><div class="inner">Adipiscing elit</div></li>
+						<li id="Aenean eget"><div class="inner">Aenean eget</div></li>
+						<li id="Erat tortor"><div class="inner">Erat tortor</div></li>
+						<li id="Vestibulum"><div class="inner">Vestibulum</div></li>
+						<li id="Ullamcorper"><div class="inner">Ullamcorper</div></li>
+						<li id="Purus tincidunt"><div class="inner">Purus tincidunt</div></li>
+						<li id="Lectus egestas"><div class="inner">Lectus egestas ante imperdiet </div></li>
+					</ul>
+				</div>
+				<div class="detailed_docs planning_docs" id="Aenean_docs"><!-- main container, width = 780px = width of the banner -->
+					<div class="dashboards_list">
+						<ul>
+							<li id="SalesPerfByCountry" class="dashboard">
+								<img class="box_image" src="images/box_1.jpg" alt="Sales Performance by Country">
+								Sales Performance by Country
+							</li>
+							<li id="SalesPerfByBrand" class="dashboard">
+								<img class="box_image" src="images/box_2.jpg" alt="Sales Performance by Brand">
+								Sales Performance by Brand
+							</li>
+							<li id="SalesPerfByProduct" class="dashboard">
+								<img class="box_image" src="images/box_3.jpg" alt="Sales Performance by Product">
+								Sales Performance by Product
+							</li>
+						</ul>
+					</div>
+					<div class="links_list">
+						<div class="links_column" id="SalesPerformance">
+							<div class="links_column_title">Sales Performance</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Performance by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Brand</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales Waterfall by Country</li>
+							</ul>
+						</div>
+						<div class="links_column" id="OtherSalesAnalysisTools">
+							<div class="links_column_title">Other Sales Analysis Tools</div>
+							<ul>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales by Month by Country by SKU</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales &amp; Quantities by Product</li>
+								<li class="link_entry"><img class="xls_image" src="images/xls.png" alt="Excel document">Sales History Analysis</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer_element" id="About"><div class = "inner_footer">About</div><img class="qa_color" src="images/bottom-link.png" alt="About"></div>
+			<div class="footer_element" id="News"><div class = "inner_footer">News</div><img class="qa_color" src="images/bottom-link.png" alt="News"></div>
+		</div>
+	</div>
+	<div id="side_column"><!--right column with 3 tiles-->
+		<div class="side_section" id="side_section_1">
+			<div class="upper_menu" id="registration_upper"><img class="side_nav_image" src="images/registration.png">Registration</div>
+			<div class="lower_menu" id="registration_lower">Request access to the tools<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<div class="side_section" id="side_section_2">
+			<div class="upper_menu" id="survey_upper"><img class="side_nav_image" src="images/survey.png">Survey</div>
+			<div class="lower_menu" id="survey_lower">Give feedback about the site or tools<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<div class="side_section" id="side_section_3">
+			<div class="upper_menu" id="contact_upper"><img class="side_nav_image" src="images/contact.png">Contact</div>
+			<div class="lower_menu" id="contact_lower">Ask questions to the team<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<!--additional 5 div, replacing the first 3 on click-->
+		<div class="side_section_bis" id="side_section_bis_1">
+			<div class="upper_menu" id="registration_upper"><img class="side_nav_image" src="images/Registration.png">Registration</div>
+			<div class="lower_menu" id="registration_lower">Request access to the tools<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<div class="side_section_bis" id="side_section_bis_2">
+			<div class="upper_menu" id="whyYouNeed_upper"><img class="side_nav_image" src="images/Why-you-need.png"><div class="inner_text">Why you need<text style='color:#927a69;font-size:8.25pt'>Global analytics</text></div></div>
+			<div class="lower_menu" id="whyYouNeed_lower">Easy access to high-level management information<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<div class="side_section_bis" id="side_section_bis_3">
+			<div class="upper_menu" id="learn_upper"><img class="side_nav_image" src="images/learn.png"><div class="inner_text">Learn<text style='color:#927a69;font-size:8.25pt'>About the technology</text></div></div>
+			<div class="lower_menu" id="learn_lower">Powered by Pharma Services MIS using Microsoft BI<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<div class="side_section_bis" id="side_section_bis_4">
+			<div class="upper_menu" id="needHelp_upper"><img class="side_nav_image" src="images/Need-help.png">Need Help?</div>
+			<div class="lower_menu" id="needHelp_lower">Get the most of global analytics<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+		<div class="side_section_bis" id="side_section_bis_5">
+			<div class="upper_menu" id="training_upper"><img class="side_nav_image" src="images/training.png">Training</div>
+			<div class="lower_menu" id="training_lower">Questions? Ask the team<img class="white_arrow" src="images/teaser-link-arrow.png"></div>
+		</div>
+	</div>
+</body>
+
+</html>

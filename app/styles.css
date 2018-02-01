@@ -1,0 +1,563 @@
+/*TODO: 
+1. Create variables for colors and ratios
+2. Regroup 'detailed_selected' classes together
+*/
+
+body {
+display: flex;
+justify-content:center;
+}
+
+/*left white space*/
+#left_margin {
+width:14%; /*arbitrary ratio for left margin*/
+display:flex;
+flex-direction:column;
+margin-right: 10px;
+margin-top:15px;
+position:relative;
+}
+
+#main_section {
+width:60%; /*arbitrary ratio for main section*/
+display: flex;
+flex-direction: column;
+margin-top: 15px;
+position:relative;
+}
+
+#top_section {
+position:relative;
+width:100%;
+}
+
+#main_banner {
+position:relative;
+width:100%;
+}
+
+#sub_banner {
+display:none;
+position:relative;
+}
+
+.sub_banner_image {
+width:100%;
+}
+
+.hide_banner {
+display:none;
+}
+
+#grey_box {
+position: absolute;
+width: 100%;
+top: 0;
+background-color: #e4e0df;
+}
+
+#menu_options {
+display: flex;
+justify-content: space-between; /*ensures equal space between sections*/
+width:100%;
+}
+
+/*columns divs, float left, no margin so there is no space between column, width=1/4*/
+.column {
+display:flex;
+flex-direction:column;
+margin-top: 15px;
+border-width: 1px;
+width: 24.71%;
+font-family: Verdana, Geneva, sans-serif;
+font-size:9pt;
+background-color: #ffffff;
+border-style: solid;
+}
+
+/*columns divs, float left, no margin so there is no space between column, width=1/4*/
+.column_bis {
+display:none;
+flex-direction:column;
+margin-bottom: 10px;
+border-width: 1px;
+width: 100%;
+font-family: Verdana, Geneva, sans-serif;
+font-size:9pt;
+background-color: #ffffff;
+border-style: solid;
+}
+
+.column ul, .column_bis ul {
+list-style:none;
+padding-left: 0;
+margin-top: 0;
+margin-bottom: 0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+flex:1;
+}
+
+.column li, .column_bis li {
+padding-top: 5%;
+padding-bottom: 5%;
+border-top: 1px solid;
+display:flex;
+flex-direction:column;
+justify-content:center;
+flex:1;
+cursor: pointer;
+}
+
+.detailed_menu_options {
+display: flex;
+width:100%;
+font-family: Verdana, Geneva, sans-serif;
+font-size:8.25pt;
+height:30%;
+}
+
+.detailed_menu_options ul {
+list-style:none;
+padding-left: 0;
+display:grid;
+grid-template-columns: repeat(5, 19.48%);
+grid-auto-rows: 1fr;
+justify-content:space-between;
+width:100%;
+height:100%;
+margin-top:0.5%;
+margin-bottom:0.5%;
+}
+
+.detailed_menu_options li {
+border: 1px solid;
+margin-top: 2px;
+margin-bottom: 2px;
+cursor: pointer;
+display:flex;
+align-items:center;
+}
+
+/*div inside of the list to allow for text padding without border padding*/
+.inner {
+padding-left:5%;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+white-space:nowrap;
+}
+
+.qa_color {
+float: right;
+padding-right: 5%;
+}
+
+.qa_color_red_off {
+background-image: url("images/qa_red.png");
+width:14px;
+height:14px;
+}
+
+.qa_color_yellow_off {
+background-image: url("images/qa_yellow.png");
+width:14px;
+height:14px;
+}
+
+.qa_color_orange_off {
+background-image: url("images/qa_orange.png");
+width:14px;
+height:14px;
+}
+
+.qa_color_maroon_off {
+background-image: url("images/qa_maroon.png");
+width:14px;
+height:14px;
+}
+
+.qa_color_any_on {
+background-image: url("images/qa_white.png");
+width:14px;
+height:14px;
+}
+
+.qa_imageN {
+display: block;
+width: 100%;
+height:auto;
+}
+
+.red_off {
+color: #e44c16;
+border-color: #e44c16;
+background-color: #ffffff;
+}
+
+.red_on {
+color: #ffffff;
+border-color: #e44c16;
+background-color: #e44c16;
+}
+
+
+
+#column1, #column1_bis {
+color: #e44c16;
+border-color: #e44c16;
+}
+
+#column2, #column2_bis {
+color: #fcaf17;
+border-color: #fcaf17;
+}
+
+#column3, #column3_bis {
+color: #ec8026;
+border-color: #ec8026;
+}
+
+#column4, #column4_bis {
+color: #923222;
+border-color: #923222;
+}
+
+#footer {
+display:flex;
+justify-content:space-between;
+width: 100%;
+margin:0;
+}
+
+.footer_element {
+width: 49.8%;
+font-family: Verdana, Geneva, sans-serif;
+font-size:12pt;
+color: #e96f44;
+background-color: #f8f7f5; /*extracted hex code out of Mockup1*/
+padding-top: 3%;
+padding-bottom: 3%;
+display:flex;
+justify-content:space-between;
+margin-top: 15px;
+}
+
+.inner_footer {
+padding-left: 5%;
+}
+
+#About {
+}
+
+#News {
+}
+
+#side_column {
+width:15%; /*arbitrary ratio for side section*/
+font-family: Verdana, Geneva, sans-serif;
+/*display:flex;
+flex-direction:column;*/
+margin-left: 15px;
+margin-top: 15px;
+min-width:min-content;
+position:relative;
+}
+
+.side_section {
+display:flex;
+flex-direction:column;
+width:100%;
+margin-bottom: 15px;
+}
+
+.side_section_bis {
+display:none;
+flex-direction:column;
+width:100%;
+margin-bottom: 15px;
+}
+
+.inner_text{
+display:flex;
+flex-direction:column;
+white-space:nowrap;
+}
+
+.upper_menu {
+display:flex;
+justify-content:flex-start; /*aligns content to the left*/
+align-items:center; /*centers content vertically*/
+background-color: #f8f7f5;
+font-size:12pt;
+padding: 5%;
+/*TODO: handle overflow, visible for Registration section*/
+}
+
+.lower_menu {
+display:flex;
+justify-content:space-between; /*maximizes space between elements*/
+align-items:center; /*centers content vertically*/
+font-size:8.25pt;
+color: #ffffff;
+padding:3%;
+}
+
+.side_nav_image {
+/*padding-right:1%;*/
+}
+
+.white_arrow {
+float: right;
+padding-left:5%;
+}
+
+#registration_upper {
+color: #e44c16;
+}
+
+#registration_lower {
+background: linear-gradient(#e96f44, #ee9373);
+}
+
+#survey_upper {
+color: #a54129
+}
+
+#survey_lower {
+background: linear-gradient(#a85b4e, #bd8479);
+}
+
+#contact_upper {
+color: #ec8026;
+}
+
+#contact_lower {
+background: linear-gradient(#ef9951, #f3b27c);
+}
+
+#whyYouNeed_upper {
+color: #923222;
+}
+
+#whyYouNeed_lower {
+background: linear-gradient(#a85b4e, #bd8479);
+}
+
+#learn_upper {
+color: #ec8026;
+}
+
+#learn_lower {
+background: linear-gradient(#ef9951, #f3b27c);
+}
+
+#needHelp_upper {
+color: #fcaf17;
+}
+
+#needHelp_lower {
+background: linear-gradient(#fcaf17, #fdcf73);
+}
+
+#training_upper {
+color: #634329;
+}
+
+#training_lower {
+background: linear-gradient(#826953, #b0a093);
+}
+
+/*Define all active _bis list items*/
+
+
+#globalAnalytics_bis.selected {
+color: #ffffff;
+background-color: #e44c16;
+}
+
+#localAnalytics_bis.selected {
+color: #ffffff;
+background-color: #e44c16;
+}
+
+#MBRDecks_bis.selected {
+color: #ffffff;
+background-color: #fcaf17;
+}
+
+#IMRPublications_bis.selected {
+color: #ffffff;
+background-color: #fcaf17;
+}
+
+#tableau_bis.selected {
+color: #ffffff;
+background-color: #ec8026;
+}
+
+#globalTM1_bis.selected {
+color: #ffffff;
+background-color: #923222;
+}
+
+#localSAPBPC_bis.selected {
+color: #ffffff;
+background-color: #923222;
+}
+
+.menu_options_bis{
+display:none;
+flex-direction:column;
+}
+
+.analytics_menu_options {
+color: #e44c16;
+background-color: #ffffff;
+}
+
+.reporting_menu_options {
+color: #fcaf17;
+background-color: #ffffff;
+}
+
+.dataVisualization_menu_options {
+color: #ec8026;
+background-color: #ffffff;
+}
+
+.planning_menu_options {
+color: #923222;
+background-color: #ffffff;
+}
+
+.analytics_menu_options li.detailed_selected{
+color: #ffffff;
+background-color: #e44c16;
+border-color: #e44c16;
+font-weight: bold;
+}
+
+.reporting_menu_options li.detailed_selected{
+color: #ffffff;
+background-color: #fcaf17;
+border-color: #fcaf17;
+font-weight: bold;
+}
+
+.dataVisualization_menu_options li.detailed_selected{
+color: #ffffff;
+background-color: #ec8026;
+border-color: #ec8026;
+font-weight: bold;
+}
+
+.planning_menu_options li.detailed_selected{
+color: #ffffff;
+background-color: #923222;
+border-color: #923222;
+font-weight: bold;
+}
+
+.detailed_docs {
+width:100%;
+display: flex;
+background-color: #e4e0df;
+flex-direction: column;
+font-family: Verdana, Geneva, sans-serif;
+font-size:8.25pt;
+padding: 2%;
+box-sizing:border-box;
+}
+
+.dashboards_list {
+width:100%;
+}
+
+.dashboards_list ul{
+width:100%;
+padding-left: 0;
+display: flex;
+flex-direction: row;
+justify-content:space-evenly;
+}
+
+.dashboard {
+color: #ffffff;
+display:flex;
+flex-direction:column;
+border-width:1px;
+border-style:solid;
+}
+
+.box_image{
+width:100%;
+}
+
+.analytics_docs {
+color: #e44c16;
+}
+
+.reporting_docs {
+color: #fcaf17;
+}
+
+.dataVisualization_docs {
+color: #ec8026;
+}
+
+.planning_docs {
+color: #923222;
+}
+
+#SalesPerfByCountry{
+background-color: #e96f44;
+border-color: #e96f44;
+}
+
+#SalesPerfByBrand{
+background-color: #a85b4e;
+border-color: #a85b4e;
+}
+
+#SalesPerfByProduct{
+background-color: #ef9951;
+border-color: #ef9951;
+}
+
+.links_list {
+display:flex;
+flex-direction:row;
+justify-content:flex-start;
+}
+
+.links_column {
+width:50%;
+}
+
+.links_column_title {
+font-weight:bold;
+color: #826953;
+}
+
+.links_column ul {
+list-style-type:none;
+padding-left: 0;
+}
+
+.link_entry {
+display:flex;
+flex-direction:row;
+justify-content:flex-start;
+align-items:center;
+cursor: pointer;
+}
+
+.xls_image {
+padding-right:1%;
+}
+
+.inactive {
+display: none;
+}
