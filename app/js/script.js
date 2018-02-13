@@ -29,50 +29,66 @@ $(document).ready(function(){
 					});
 				});
 				//TODO: change pager for sub_banner
-				var img = $(event.target).closest('li').find('img');
 				var li_id = event.currentTarget.id;
-				//var img_id = li_id + '_qa_color_bis';
-				//$('#' + img_id).attr('src', 'images/qa_white.png');
 				var def_id = li_id + '_bis';
-				$('#' + def_id).addClass('selected');
-				toggle_menu_item_class($('#' + def_id));
-				$('.column_bis').fadeIn();
-				$('.menu_options_bis').css('display','flex');
-				$('.side_section_bis').css('display','flex');
-				var menu_options_id = li_id + '_bis_menu_options';
+				console.log(def_id);
+				toggle2(def_id);
+				var menu_options_id = def_id + '_menu_options';
 				var active_sub_menu = $('#' + menu_options_id).find('>ul>li:first-child');
-				active_sub_menu.addClass('detailed_selected');
 				var active_sub_menu_id = active_sub_menu.prop('id');
-				var docs_onDisplay = active_sub_menu_id + '_docs';
-				$('#' + menu_options_id).fadeIn();
-				$('#' + docs_onDisplay).css('display','flex');
+				console.log(active_sub_menu_id);
+				toggle1(active_sub_menu_id); 
+				$('.column_bis').fadeIn();
+				$('.side_section_bis').css('display','flex');
 			});
 		});
 			//TODO: change pager for sub_banner
 			//$('.slick-dots li button:before').css('background-image', "url('../images/pager_sub_banner.png')");
 			//$('.slick-dots li').css('height', '10px');		
 	});
-	// on click of column_bis menu entries, switch view to matching infos
-	$(".column_bis li").click(function(event){
-		if (!$(this).hasClass('selected')) {
-			var current_selected = $(".selected");
-			current_selected.removeClass('selected');
-			toggle_menu_item_class(current_selected);
-			$(this).addClass('selected');
-			toggle_menu_item_class($(this));
+	
+	$(".detailed_menu_options ul li").click(function(event){
+		if (!$(this).hasClass('detailed_selected')) {
+			toggle1(this.id);
 		}
 	});
-	// function toggling left-side menu items and menu sections on click
-	function toggle_menu_item_class(menu_item){
-		console.log(menu_item);
-		var menu_item_color = menu_item.data("color");
-		var color_toggle_classes = menu_item_color + "_on "+ menu_item_color + "_off";
-		var qa_color_toggle_classes = "qa_color_any_on qa_color_" + menu_item_color + "_off";
-		var menu_item_section = menu_item.prop('id') + "_section";
-		var active_sub_menu = $('#'+ menu_item_section).find('>div>ul>li:first-child');
-		menu_item.toggleClass(color_toggle_classes);
-		menu_item.find('>div>div:first-child').toggleClass(qa_color_toggle_classes);
-		$('#' + menu_item_section).toggleClass("inactive");
-		active_sub_menu.addClass('detailed_selected');
-	}	
+	
+	$(".column_bis li").click(function(event){
+		if (!$(this).hasClass('selected')) {
+			var current_selection_id = $(".selected").prop('id');
+			var new_menu_selection = event.currentTarget.id + '_menu_options'
+			toggle2(current_selection_id);
+			toggle2(this.id);
+			var new_active_sub_menu = $('#' + new_menu_selection).find('>ul>li:first-child');
+			var new_active_sub_menu_id = new_active_sub_menu.prop('id');
+			toggle1(new_active_sub_menu_id); 
+		}
+	});
+	
+	//function toggling main section sub-menu items on click
+	function toggle1(sub_menu_item){
+	console.log(sub_menu_item);
+	var current_selection = $(".detailed_selected");
+	var current_docs = current_selection.prop('id') + '_docs';
+	console.log(current_docs);
+	var docs = sub_menu_item + '_docs';
+	console.log(docs);
+	current_selection.toggleClass("detailed_selected");
+	$('#' + current_docs).toggleClass("inactive");
+	$('#' + sub_menu_item).toggleClass("detailed_selected");
+	$('#' + docs).toggleClass("inactive");
+	}
+	
+	//function toggling left side menu items on click
+	function toggle2(menu_item){
+	console.log(menu_item);
+	var menu_item_color = $('#' + menu_item).data("color");
+	var menu_item_menu_options = menu_item + "_menu_options";
+	var color_toggle_classes = menu_item_color + "_on "+ menu_item_color + "_off";
+	var qa_color_toggle_classes = "qa_color_any_on qa_color_" + menu_item_color + "_off";
+	$('#' + menu_item).toggleClass(color_toggle_classes);
+	$('#' + menu_item).find('>div>div:first-child').toggleClass(qa_color_toggle_classes);
+	$('#' + menu_item).toggleClass("selected");
+	$('#' + menu_item_menu_options).toggleClass("inactive");
+	}
 });
